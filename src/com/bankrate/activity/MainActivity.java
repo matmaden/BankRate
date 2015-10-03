@@ -20,7 +20,7 @@ import android.widget.Toast;
 import com.bankrate.R;
 import com.bankrate.customlib.slidingmenu.BaseActivity;
 import com.bankrate.customlib.slidingmenu.SlidingMenu;
-import com.bankrate.fragment.AboutMeFragment;
+import com.bankrate.fragment.AboutAppFragment;
 import com.bankrate.fragment.StoreDetailsFragment;
 import com.bankrate.services.MyService;
 
@@ -40,7 +40,7 @@ public class MainActivity extends BaseActivity implements OnClickListener
     private ImageView imgStopServiceLocation;
     private ImageView mImgSearchBookNavigation;
     // Fragment
-    public AboutMeFragment aboutFragment;
+    public AboutAppFragment aboutFragment;
     Toast toastExit;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -51,8 +51,8 @@ public class MainActivity extends BaseActivity implements OnClickListener
         setEvent();
 //        SharedPreferences pre = getSharedPreferences(name, mode)
         // Load dash board first
-        aboutFragment = AboutMeFragment.newInstance();
-        setFragmentContent(aboutFragment, AboutMeFragment.TAG);
+        aboutFragment = AboutAppFragment.newInstance();
+        setFragmentContent(aboutFragment, AboutAppFragment.TAG);
     }
 
     /**

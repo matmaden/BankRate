@@ -21,9 +21,9 @@ import com.bankrate.common.ModelEvent;
  * @since: 1.0
  * 
  */
-public class AboutMeFragment extends BaseFragment implements OnClickListener,
+public class AboutAppFragment extends BaseFragment implements OnClickListener,
 		AnimationListener {
-	public static final String TAG = AboutMeFragment.class.getSimpleName(); // This
+	public static final String TAG = AboutAppFragment.class.getSimpleName(); // This
 																			// is
 																			// tag
 																			// to
@@ -35,8 +35,8 @@ public class AboutMeFragment extends BaseFragment implements OnClickListener,
 	// Animation
 	Animation animSideTogether;
 
-	public static AboutMeFragment newInstance() {
-		AboutMeFragment f = new AboutMeFragment();
+	public static AboutAppFragment newInstance() {
+		AboutAppFragment f = new AboutAppFragment();
 		Bundle args = new Bundle();
 		f.setArguments(args);
 		return f;

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  	xmlns:android="http://schemas.android.com/apk/res/android"
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	android:orientation="horizontal"
+  	android:gravity="center"
+    android:padding="5dp">
+    <ImageView 
+	      	android:id="@+id/img_catagory"
+	      	android:layout_width="30dp"
+	        android:layout_height="30dp"
+	        android:scaleType="centerInside"
+	        android:contentDescription="@string/app_name"
+	      	/>
+    <TextView
+             android:id="@+id/tvtTitleCatagory"
+             android:textSize="18sp"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:textColor="@color/black"
+             android:textStyle="bold"
+         	/>
+   	<ImageView
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:background="@drawable/next"
+   	    android:contentDescription="@string/app_name"
+   	    />
+</LinearLayout>

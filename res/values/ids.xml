@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="selected_view" type="id"/>
+	<item name="viewpager_id_base" type="id"/>
+	<item name="item_article_landing_page" type="id"/>
+	<item name="item_node_landing_page" type="id"/>
+</resources>

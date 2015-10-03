@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+     >
+
+    <ImageView
+        android:id="@+id/img_Book"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:background="@drawable/border_line"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="fitCenter" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Tiêu đề:"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginRight="3dp"
+             />
+
+        <TextView
+            android:id="@+id/tvtTitleBook"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/orange"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Tác giả:"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginRight="3dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvtAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:maxLines="3"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+	<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Giá cả:"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginRight="3dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvtPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:maxLines="3"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Đánh giá:"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginRight="3dp"
+            android:textStyle="bold" />
+
+        <RatingBar
+            android:id="@+id/rating_starbook"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="30sp"
+            android:layout_marginTop="5dp"
+            android:numStars="5"
+            android:progressDrawable="@drawable/ratingbar_progress"
+            android:stepSize="0.5" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="fill_horizontal"
+        android:text="Nội dung tóm lược:"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/tvtDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="fill_horizontal"
+            android:text="abc"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </ScrollView>
+
+</LinearLayout>

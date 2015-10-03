@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- Color of Header -->
+ <!--    <color name="header_general_purple">#8777b6</color>
+    <color name="header_general_green">#7abe43</color>
+    <color name="header_general_orange">#f5821f</color>
+    <color name="header_general_text">#595959</color> -->
+
+    <color name="color_stroke">#dcdcdc</color>
+    <color name="color_background">#f1f1f1</color>
+    <color name="color_black">#000000</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_gray_border">#d5d5d5</color>
+    <color name="color_person_post">#00b4ff</color>
+    <color name="color_transparent">#10ffffff</color>
+    <color name="color_bg_tabbar">#282828</color>
+    <color name="color_bg_tabbar_selector"> #37393c </color>
+    <color name="bg_button_center_node_detail">#f97e14</color>
+    <color name="bg_button_center_node_detail_selector">#ee9140</color>
+    <color name="bg_left_navigation_item">#202022</color>
+    <color name="bg_search_navigation_item">#030303</color>
+    <color name="bg_left_navigation_item_selector">#BF6f6f73</color>
+
+
+
+	<!-- Action activity -->
+	<color name="color_circle_action_activity">#212121</color>
+
+    <color name="txt_name_object_landing"> #00b4ff </color>
+
+
+    <!-- Color text number -->
+    <color name="txt_like_comment_press"> #c7c7c7 </color>
+
+    <!-- Color in sliding menu -->
+    <color name="red">#900</color>
+    <color name="green">#090</color>
+    <color name="blue">#009</color>
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+
+    <drawable name="ab_bg_black">#aa000000</drawable>
+
+    <color name="orange">#f5821f</color>
+    <color name="blue2">#406fd6</color>
+
+    <color name="green_selected">#7abe43</color>
+    <color name="cancel_header">#c0c0c0</color>
+
+    <color name="gray"> #eaeaea </color>
+    <color name="color_disable_post">#f5b47a</color>
+    
+    <!-- Friend -->
+    <color name="color_menu_unfriend_border">#dddddd</color>
+    <color name="color_menu_unfriend_border_first">#f4f4f4</color>
+    <color name="color_menu_unfriend_text_selected">#f66a51</color>
+    <color name="color_menu_unfriend_text">#767676</color>
+    <color name="color_menu_unfriend_background">#ffffff</color>
+    
+    <!-- User Profile -->
+    <color name="user_profile_text">#838383</color>
+    <color name="user_profile_text_selected">#ffffff</color>
+    <color name="user_profile_bg_tab_bar">#333333</color>
+    <color name="user_profile_btn_tab_bar">#282828</color>
+    <color name="user_profile_btn_tab_bar_center">#f6811c</color>
+    <color name="user_profile_btn_tab_bar_center_border">#ff5400</color>
+	<!-- Generals values -->
+	<color name="orange_color">#f15900</color>
+	<color name="borderline">#A8A7A7</color>
+</resources>

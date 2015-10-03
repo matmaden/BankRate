@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry excluding="webdev/customdialog/PhotoGalleryDialog.java|webdev/multipickimage/MainActivity.java|webdev/processimage/ImageLoader.java|webdev/multipickimage/CustomGalleryActivity.java|webdev/danagtravel/LandingPageActivity.java|com/viettel/adapters/SearchAdapter.java|com/viettel/fragment/ProductDetailsFragment.java" kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

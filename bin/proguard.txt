@@ -1,0 +1,30 @@
+# view res/layout/pager.xml #generated:7
+-keep class android.support.v4.view.ViewPager { <init>(...); }
+
+# view res/layout/detail_book_activity.xml #generated:1
+-keep class android.support.v4.widget.DrawerLayout { <init>(...); }
+
+# view AndroidManifest.xml #generated:49
+-keep class com.bankrate.activity.DetailsTransactionActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:54
+-keep class com.bankrate.activity.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:37
+-keep class com.bankrate.activity.WellcomeActivity { <init>(...); }
+
+# view res/layout/slidingmenumain.xml #generated:2
+-keep class com.bankrate.customlib.slidingmenu.SlidingMenu { <init>(...); }
+
+# view AndroidManifest.xml #generated:73
+-keep class com.bankrate.services.MessageReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:58
+-keep class com.bankrate.services.MyService { <init>(...); }
+
+# view AndroidManifest.xml #generated:64
+-keep class com.bankrate.services.WifiConnectionReceiver { <init>(...); }
+
+# view res/layout/menu.xml #generated:2
+-keep class webdev.slidingmenu.SampleListFragment { <init>(...); }
+

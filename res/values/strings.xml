@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- public string -->
+    <string name="app_name">BankRate</string>
+    <string name="action_settings">Settings</string>
+    <string name="timeOutAnimation">300</string>
+    <string name="cancel">Cancel</string>
+    <string name="OK">OK</string>
+
+    <!-- sign in -->
+    <string name="login_facebook">Login with Facebook</string>
+    <!-- <string name="FACEBOOK_ID">453345281375610</string> -->
+    <string name="or">Or</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="not_a_youlook_user">Have not account user?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign In</string>
+    <string name="your_name">Your name</string>
+    <string name="already_a_youlook_user">Already a Youlook user?</string>
+
+    <!-- following is just string template -->
+    <string name="notifications">Notifications</string>
+    <string name="image_content">image</string>
+    <string name="loading">Loading…</string>
+    <!-- screen sign up -->
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name_cannot_be_blank">First name cannot be blank.</string>
+    <string name="last_name_cannot_be_blank">Last name cannot be blank.</string>
+    <string name="email_cannot_be_blank">Email cannot be blank.</string>
+    <string name="error_email_invalid">Invalid email format.</string>
+    <string name="password_cannot_be_blank">Password cannot be blank.</string>
+    <string name="password_is_too_short">Password is too short (minimum is 6 characters).</string>
+    <!-- end screen sign up -->
+
+    <string-array name="menus">
+        <item>Home</item>
+        <item>Android</item>
+        <item>Blackberry</item>
+        <item>J2ME</item>
+        <item>Sencha Touch</item>
+        <item>PhoneGap</item>
+        <item>Java</item>
+    </string-array>
+
+    <string name="message">Message</string>
+    <string name="drawer_open">Open Drawer</string>
+    <string name="drawer_close">Close Drawer</string>
+    <string name="message_quit_app">Press back again to exit!</string>
+    <string name="list_catagory">Danh mục sách</string>
+    <string name="hobit"> Cà phê,đọc báo mỗi buổi sáng. Thích đi câu cá, đi du lịch bụi, tham gia các cuộc chơi mang tính chất may mắn, hên xui. :3 <br />Music: (tùy tâm trạng) các thể loại nhạc quê hương, nhạc trẻ, nhạc trữ tình, rap, rock... <br /> Thể thao: bóng đá, billard, cầu lông, câu cá, cờ tướng… <br /></string>
+    <string name="search">Search</string>
+
+</resources>

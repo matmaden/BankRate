@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2011 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<resources>
+
+    <!-- Header General -->
+    <dimen name="header_general_text">21sp</dimen>
+
+    <!-- User Profile -->
+    <dimen name="user_profile_text_tab_bar">12sp</dimen>
+
+    <!-- this for image circle -->
+    <dimen name="image_circle_size_owner_album">20dp</dimen>
+    <dimen name="image_circle_size_list_follower">48dp</dimen>
+    <dimen name="image_circle_size_owner_node_and_article_landing_page">26dp</dimen>
+    <dimen name="image_circle_size_list_friend">47dp</dimen>
+    <dimen name="image_circle_size_owner_node_activity">40dp</dimen>
+    <dimen name="image_circle_size_list_notification">55dp</dimen>
+    <dimen name="image_circle_size_list_search_navigation">48dp</dimen>
+    <dimen name="image_circle_size_owner_video">24dp</dimen>
+    <dimen name="image_circle_size_owner_article">40dp</dimen>
+    <dimen name="image_circle_size_avatar_user">35dp</dimen>
+    <dimen name="image_circle_size">48dp</dimen>
+    <dimen name="image_circle_size_owner_node_detail">26dp</dimen>
+    <dimen name="image_circle_size_relation_center">70dp</dimen>
+    <dimen name="image_circle_size_relation_side">60dp</dimen>
+    <dimen name="image_circle_size_owner_comment">40dp</dimen>
+    <!-- this for image normal -->
+    <dimen name="image_size_item_album">140dp</dimen>
+    <dimen name="image_size_item_article">80dp</dimen>
+    <dimen name="image_size_height_item_node_landing_page">195dp</dimen>
+    <dimen name="image_size_height_image_article_detail">195dp</dimen>
+    <dimen name="image_size_item_node_activity_type_album">122dp</dimen>
+    <dimen name="image_size_item_node_activity_type_article">50dp</dimen>
+    <dimen name="image_size_item_node_activity_type_image">172dp</dimen>
+    <dimen name="image_size_node_detail">195dp</dimen>
+    <dimen name="image_size_user_post_article_and_photo">36dp</dimen>
+    <dimen name="image_thumbnail_spacing">10dp</dimen>
+    <dimen name="viewpager_margin">-130dp</dimen>
+    <dimen name="viewpager_margin_fix">65dp</dimen>
+    <dimen name="type_object_landing"> 12dp</dimen>
+    <dimen name="name_object_landing"> 14dp</dimen>
+    <dimen name="txt_artiles_post"> 15sp</dimen>
+    <dimen name="text_size_large">16sp</dimen>
+    <dimen name="text_size_small">11sp</dimen>
+    <dimen name="image_thumbnail_size">100dp</dimen>
+    <dimen name="slidingmenu_offset">60dp</dimen>
+    <dimen name="list_padding">10dp</dimen>
+    <dimen name="shadow_width">15dp</dimen>
+    <dimen name="image_detail_pager_margin">80dp</dimen>
+
+    <integer name="num_cols">1</integer>
+
+    <!-- DetailNode layout -->
+    <dimen name="Object_name"> 24sp </dimen>
+    <dimen name="Type_node"> 18sp </dimen>
+    <dimen name="txt_follow">13sp</dimen>
+    <dimen name="txt_number_notifications"> 10sp </dimen>
+
+    <!-- Text -->
+    <dimen name="text_left_navigation"> 12dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- circle -->
+    <dimen name="width_stroke_2dp">1dp</dimen>
+
+    <!-- sign in -->
+    <dimen name="margin_youlook_top">25dp</dimen>
+    <dimen name="margin_youlook_bottom">30dp</dimen>
+    <dimen name="margin_or_top_bottom">20dp</dimen>
+    <dimen name="margin_login_top">15dp</dimen>
+    <dimen name="margin_login_bottom">10dp</dimen>
+    <dimen name="margin_edit_sign_up">80dp</dimen>
+
+    <!-- item article landing page -->
+    <dimen name="text_size_poster_name">12sp</dimen>
+    <dimen name="text_size_poster_label">10sp</dimen>
+
+    <!-- this is used for pull to refresh list view -->
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+
+    <!-- this is used for horizontal list view in node detail -->
+    <dimen name="margin_item_image_album">20dp</dimen>
+    <dimen name="margin_spacing_item_image_album">5dp</dimen>
+
+    <!-- this is used for article detail -->
+    <dimen name="margin_bottom_scrollview"> 3dp </dimen>
+    <dimen name="size_image_content_article_detail"> 195dp</dimen>
+    <dimen name="margin_content_article_detail"> 10dp </dimen>
+    <dimen name="margin_top_image_content">7dp</dimen>
+    <dimen name="margin_right_image_content"> 4dp </dimen>
+    <dimen name="margin_left_image_content"> 4dp </dimen>
+    <dimen name="margin_layout_mask_image_content"> 64dp </dimen>
+    <dimen name="margin_top_layout_like_comment_button"> 9dp </dimen>
+    <!-- layout avatar article detail -->
+    <dimen name="margin_bottom_avatar"> 7dp</dimen>
+    <dimen name="margin_left_avatar"> 10dp </dimen>
+    <dimen name="margin_right_avatar"> 10dp </dimen>
+    <dimen name="margin_top_avatar"> 7dp</dimen>
+    <dimen name="margin_top_layout_object_time"> 10dp </dimen>
+    <dimen name="margin_right_layout_object_time"> 11dp </dimen>
+    <dimen name="margin_bottom_layout_object_time"> 12dp </dimen>
+    <dimen name="text_size_article_user_name"> 13sp </dimen>
+    <dimen name="text_size_type_post"> 12sp </dimen>
+    <dimen name="text_size_object_name"> 13sp </dimen>
+    <dimen name="text_size_time"> 11sp </dimen>
+    <dimen name="text_size_btn_like_comment"> 14sp </dimen>
+    <dimen name="text_size_number_like_comment"> 13sp </dimen>
+    <dimen name="margin_top_webview_content"> 7dp </dimen>
+    <dimen name="margin_bottom_webview_content"> 15dp </dimen>
+    <dimen name="margin_left_webview_content"> 9dp </dimen>
+    <dimen name="margin_right_webview_content"> 9dp </dimen>
+    <dimen name="width_layout_btn_like"> 50dp </dimen>
+    <dimen name="width_layout_btn_comment"> 100dp </dimen>
+    <dimen name="margin_top_progressbar"> 150dp </dimen>
+
+    <!-- action friends -->
+    <dimen name="text_size_action_friends">14sp</dimen>
+    <dimen name="width_frame_action_friends">160dp</dimen>
+    <dimen name="margin_bottom_text_button"> 9dp </dimen>
+    <dimen name="margin_left_text_button"> 7dp </dimen>
+    <dimen name="margin_right_text_button"> 7dp </dimen>
+    <!-- End header layout post -->
+
+
+    <!-- Layout request friends -->
+    <dimen name="size_avatar"> 47dp </dimen>
+    <dimen name="text_size_name"> 15sp </dimen>
+    <dimen name="margin_right_text_number_mutual"> 2dp</dimen>
+    <dimen name="text_size_not_now"> 12sp </dimen>
+    <dimen name="text_people_you_maybe_know"> 15dp </dimen>
+    <dimen name="margin_top_friends_request"> 7dp </dimen>
+    <dimen name="margin_bottom_friends_request"> 7dp </dimen>
+    <dimen name="margin_top_people_you_maybe_know"> 10dp </dimen>
+    <dimen name="margin_bottom_people_you_maybe_know"> 10dp </dimen>
+    <dimen name="margin_left_people_you_maybe_know"> 10dp </dimen>
+
+    <!-- End layout request friends -->
+    <!-- Layout write comment article detail -->
+    <dimen name="padding_edt_write_comment"> 8dp </dimen>
+    <!-- End layout write comment article detail -->
+
+
+    <!-- Menu Unfriend and Menu Delete Photo -->
+    <dimen name="menu_friend_margin_x">0dp</dimen>
+    <dimen name="menu_friend_margin_y">4dp</dimen>
+    <dimen name="menu_more_photo_text_size">15dp</dimen>
+    
+    <dimen name="menu_more_of_detail_photo_margin_x">20dp</dimen>
+    <dimen name="menu_more_of_detail_photo_margin_y">-135dp</dimen>
+    <dimen name="menu_more_of_detail_photo_every_height_btn">32dp</dimen>
+    
+    <dimen name="height_layout_header">46dp</dimen>
+    
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="photo_width">90dp</dimen>
+    <dimen name="photo_height">90dp</dimen>
+
+	<!-- Action activity -->
+	<dimen name="cirle_view_size">210dp</dimen>
+	<dimen name="cirle_view_rho">205dp</dimen>
+	<dimen name="cirle_view_stroke">3dp</dimen>
+
+</resources>

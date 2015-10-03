@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_layout_header"
+    android:background="@color/color_background" >
+
+    <ImageView
+        android:id="@+id/img_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dp"
+        android:contentDescription="@string/image_content"
+        android:src="@drawable/ic_open_left_navigation" />
+  <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/image_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_line_under_header" />
+
+    <ImageView
+        android:id="@+id/img_menu_store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/img_menu_search"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/image_content"
+        android:src="@drawable/ic_store"
+        android:layout_marginRight="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/img_stop_service_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/img_menu_store"
+        android:layout_marginRight="14dp"
+        android:layout_toLeftOf="@+id/img_menu_store"
+        android:contentDescription="@string/image_content"
+        android:src="@drawable/default_ptr_rotate" 
+        android:visibility="gone"
+        />
+	<ImageView
+        android:id="@+id/img_menu_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="6dp"
+        android:contentDescription="@string/image_content"
+        android:src="@drawable/search_magnifying_glass_find" />
+</RelativeLayout>

@@ -13,6 +13,7 @@ import org.apache.http.HttpVersion;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.mime.MultipartEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
@@ -55,7 +56,7 @@ public abstract class BaseWebservice {
 		wsUrl = wsUrl.replace(" ", "%20");
 		System.out.println("getWSAsString:"+wsUrl);
 		try{
-			HttpPost post = new HttpPost(wsUrl);
+			HttpGet post = new HttpGet(wsUrl);
 			post.setHeader("Authorization",Common.AUTHORIZE_STRING);
 			HttpResponse response = client.execute(post);
 			HttpEntity entity = response.getEntity();
@@ -77,20 +78,20 @@ public abstract class BaseWebservice {
 	 * @param errorLog
 	 * @return
 	 */
-	protected JSONArray doGet(String wsUrl, String errorLog){
-		JSONArray ret = null;		
+	protected JSONObject doGet(String wsUrl, String errorLog){
+		JSONObject ret = null;		
 		HttpClient client = new DefaultHttpClient();
 		wsUrl = wsUrl.replace(" ", "%20");
 		System.out.println("doGet:::"+wsUrl);
 		try{
-			HttpPost post = new HttpPost(wsUrl);
-			post.setHeader("Authorization",Common.AUTHORIZE_STRING);
+			HttpGet post = new HttpGet(wsUrl);
+//			post.setHeader("Authorization",Common.AUTHORIZE_STRING);
 			HttpResponse response = client.execute(post);
 			HttpEntity entity = response.getEntity();
 			if(entity != null){
 				InputStream is = entity.getContent();
 				String str = convertStreamToString(is);
-				ret = new JSONArray(str);
+				ret = new JSONObject(str);
 			}
 		}
 		catch(Exception ex){

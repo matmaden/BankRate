@@ -1,16 +1,29 @@
 package com.bankrate.activity;
 
+import java.io.BufferedInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.List;
+
+import org.json.JSONObject;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ActivityManager;
+import android.app.ProgressDialog;
 import android.app.ActivityManager.RunningServiceInfo;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
@@ -20,6 +33,8 @@ import com.bankrate.R;
 import com.bankrate.customlib.slidingmenu.BaseActivity;
 import com.bankrate.customlib.slidingmenu.SlidingMenu;
 import com.bankrate.fragment.AboutAppFragment;
+import com.bankrate.wbservices.GeneralServices;
+import com.google.gson.JsonArray;
 
 /**
  * @Description: activity man hinh chinh
@@ -30,6 +45,7 @@ import com.bankrate.fragment.AboutAppFragment;
  * 
  */
 public class MainActivity extends BaseActivity implements OnClickListener {
+	public static final String TAG = MainActivity.class.getSimpleName();
 	public FragmentManager fragmentManager;
 	private ImageView mImgOpenLeftNavigation;
 	// Fragment
@@ -47,6 +63,69 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		// Load dash board first
 		aboutFragment = AboutAppFragment.newInstance();
 		setFragmentContent(aboutFragment, AboutAppFragment.TAG);
+		new DownloadFileFromURL().execute();
+	}
+
+	/**
+	 * Background Async Task to download file
+	 * */
+	class DownloadFileFromURL extends AsyncTask<String, String, String> {
+
+		/**
+		 * Before starting background thread Show Progress Bar Dialog
+		 * */
+		ProgressDialog pDialog;
+
+		@SuppressWarnings("deprecation")
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			pDialog = new ProgressDialog(MainActivity.this);
+			pDialog.setMessage("Downloading file. Please wait...");
+			pDialog.setIndeterminate(false);
+
+			pDialog.setMax(100);
+			pDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+			pDialog.setCancelable(true);
+			pDialog.setCanceledOnTouchOutside(true);
+			pDialog.setIcon(R.drawable.ic_launcher);
+
+			pDialog.show();
+		}
+
+		/**
+		 * Downloading file in background thread
+		 * */
+		@Override
+		protected String doInBackground(String... f_url) {
+			GeneralServices service = new GeneralServices();
+			String str = service.getResultBankRate();
+			Log.d(TAG, str);
+			JSONObject jobj =  service.getResultFetchInforUser("test hang", "test hang 1",
+					"test hang 2");
+			Log.d(TAG, jobj.toString());
+			return null;
+		}
+
+		/**
+		 * Updating progress bar
+		 * */
+		protected void onProgressUpdate(String... progress) {
+			// setting progress percentage
+			pDialog.setProgress(Integer.parseInt(progress[0]));
+		}
+
+		/**
+		 * After completing background task Dismiss the progress dialog
+		 * **/
+		@SuppressWarnings("deprecation")
+		@Override
+		protected void onPostExecute(String file_url) {
+			// dismiss the dialog after the file was downloaded
+			pDialog.dismiss();
+			// Displaying downloaded image into image view
+		}
+
 	}
 
 	/**

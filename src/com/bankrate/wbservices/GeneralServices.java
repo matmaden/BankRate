@@ -21,29 +21,28 @@ public class GeneralServices extends BaseWebservice{
 	
 	
 	
-	public JSONObject getResultFetchPoint(String username,String point, String deviceId)
+	public JSONObject getResultFetchInforUser(String username,String point, String deviceId)
 	{	
-		String wsUrl = "http://customer.nhuanquang.com/tapmoney/ws.php?submitPoint=true";
-		String errorLog = "Error while fetch-country";
+		String wsUrl = "http://thuetrosinhvien.com/rest_slim/v1/registerNH";
+		String errorLog = "Error while fetch-registerNH";
 		
 		Log.e("wsUrl", wsUrl);
 		
-		List<NameValuePair> listParams = new ArrayList<NameValuePair>(3);
-		listParams.add(new BasicNameValuePair("username", username));
-		listParams.add(new BasicNameValuePair("point", point));
-		listParams.add(new BasicNameValuePair("deviceId", deviceId));
+		List<NameValuePair> listParams = new ArrayList<NameValuePair>(6);
+		listParams.add(new BasicNameValuePair("name", username));
+		listParams.add(new BasicNameValuePair("email", "lttruongx4@gmail.com"));
+		listParams.add(new BasicNameValuePair("birthday", deviceId));
+		listParams.add(new BasicNameValuePair("address", deviceId));
+		listParams.add(new BasicNameValuePair("phone", deviceId));
+		listParams.add(new BasicNameValuePair("gender", deviceId));
 		return doGetJSONObjPOST(wsUrl, errorLog, listParams);
 	}
-	public String doLogin(String username, String password)
+	public String getResultBankRate()
 	{	
-		/*String wsUrl = UrlAPI.URL_LOGIN + "?username="+username+"&password="+ password;
-		String errorLog = "Error while fetch-country";
+		String wsUrl = "http://thuetrosinhvien.com/rest_slim/v1/InterestRate";
+		String errorLog = "Error while fetch-getResultBankRate";
 		Log.e("wsUrl", wsUrl);
-		List<NameValuePair> listParams = new ArrayList<NameValuePair>(2);
-		listParams.add(new BasicNameValuePair("username", username));
-		listParams.add(new BasicNameValuePair("password", password));
-		return getWSAsString(wsUrl, errorLog);*/
-		return "";
+		return getWSAsString(wsUrl, errorLog);
 	}
 	
 	/*public JSONObject addAddress(String street1, String street2, String street3,

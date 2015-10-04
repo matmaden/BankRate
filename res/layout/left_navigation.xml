@@ -4,33 +4,57 @@
     android:layout_height="wrap_content"
     android:orientation="vertical" >
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/drawer_rl_profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal" >
+        android:gravity="center_vertical" >
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="7dp"
-            android:layout_marginRight="7dp"
+        <com.bankrate.views.RoundedImageView
+            android:id="@+id/drawer_profile_img"
+            android:layout_width="@dimen/dip100"
+            android:layout_height="@dimen/dip100"
+            android:layout_margin="@dimen/dip10"
+            android:adjustViewBounds="true"
             android:contentDescription="@string/app_name"
-            android:scaleType="fitXY"
-            android:src="@drawable/icon_category" />
+            android:src="@drawable/allank" />
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="@string/list_catagory"
-            android:textColor="@color/orange"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+            android:layout_marginTop="@dimen/dip10"
+            android:layout_toRightOf="@+id/drawer_profile_img"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/drawer_profile_tv"
+                style="@style/NormalTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="@dimen/font_large"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPosition"
+                style="@style/NormalTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dip05"
+                android:text="@string/app_name"
+                android:textSize="@dimen/font_normal" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_alignParentBottom="true"
+            android:background="@color/Color_Divider" />
+    </RelativeLayout>
 
     <ListView
-        android:id="@+id/listDeal_MoreDeals"
+        android:id="@+id/listMenuLeft"
         style="@style/ListView"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"

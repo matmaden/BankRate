@@ -93,7 +93,7 @@ public class LeftNavigationFragment extends BaseFragment implements
 	 */
 	@Override
 	protected void init(View layout) {
-		lvDeals = (ListView) layout.findViewById(R.id.listDeal_MoreDeals);
+		lvDeals = (ListView) layout.findViewById(R.id.listMenuLeft);
 
 		adapterCatagory = new CatagoryListAdapter(getActivity());
 		lvDeals.setAdapter(adapterCatagory);

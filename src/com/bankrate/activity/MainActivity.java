@@ -129,32 +129,6 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 			slidingMenu.setMode(SlidingMenu.LEFT);
 			toggle();
 			break;
-		case R.id.img_menu_store:
-			try {
-				Fragment fragmentStotr = StoreDetailsFragment.newInstance();
-				FragmentTransaction fragmentTransaction = fragmentManager
-						.beginTransaction();
-				fragmentTransaction.replace(R.id.frame_main, fragmentStotr,
-						StoreDetailsFragment.TAG);
-				fragmentTransaction.commit();
-				slidingMenu.showContent();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-
-			break;
-		case R.id.img_stop_service_location:
-			try {
-				if (isServiceRunning((Activity) MainActivity.this,
-						MyService.LOG_TAG)) {
-					stopService(new Intent(MainActivity.this, MyService.class));
-				} else {
-					startService(new Intent(MainActivity.this, MyService.class));
-				}
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-			break;
 		default:
 			break;
 		}

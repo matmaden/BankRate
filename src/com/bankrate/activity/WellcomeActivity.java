@@ -16,7 +16,7 @@ import com.bankrate.utils.StoreSharePreferences;
  * @since:Feb 7, 2014 4:24:04 PM
  * @version: 1.0
  * @since: 1.0
- * adsasdas
+ * adsasdasasdasddasdasdasdasd132
  */
 public class WellcomeActivity extends Activity implements OnClickListener {
 	private static int SPLASH_TIME = 1000;

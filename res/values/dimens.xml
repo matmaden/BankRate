@@ -73,8 +73,8 @@
 
     <!-- Text -->
     <dimen name="text_left_navigation"> 12dp</dimen>
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_horizontal_margin">5dp</dimen>
+    <dimen name="activity_vertical_margin">5dp</dimen>
 
     <!-- circle -->
     <dimen name="width_stroke_2dp">1dp</dimen>

@@ -23,6 +23,7 @@ public class StoreSharePreferences {
 	 * @datetime: Nov 14, 2013 11:21:53 AM
 	 * @param
 	 */
+	private final static String NAME_PREF = "BANK_RATE";
 	Context mContext;
 	SharedPreferences sharedPreferences;
 
@@ -40,8 +41,8 @@ public class StoreSharePreferences {
 	 * @throws:
 	 */
 	public boolean loadBooleandSavedPreferences(String keyValue) {
-		sharedPreferences = PreferenceManager
-				.getDefaultSharedPreferences(mContext);
+		sharedPreferences = mContext.getSharedPreferences(NAME_PREF,
+				Context.MODE_PRIVATE);
 		boolean value = sharedPreferences.getBoolean(keyValue, false);
 		return value;
 	}
@@ -55,9 +56,9 @@ public class StoreSharePreferences {
 	 * @return: void
 	 * @throws:
 	 */
-	public void savePreferences(String key, boolean value) {
-		SharedPreferences sharedPreferences = PreferenceManager
-				.getDefaultSharedPreferences(mContext);
+	public void saveBooleanPreferences(String key, boolean value) {
+		sharedPreferences = mContext.getSharedPreferences(NAME_PREF,
+				Context.MODE_PRIVATE);
 		Editor editor = sharedPreferences.edit();
 		editor.putBoolean(key, value);
 		editor.commit();
@@ -73,8 +74,8 @@ public class StoreSharePreferences {
 	 * @throws:
 	 */
 	public String loadStringSavedPreferences(String keyValue) {
-		sharedPreferences = PreferenceManager
-				.getDefaultSharedPreferences(mContext);
+		sharedPreferences = mContext.getSharedPreferences(NAME_PREF,
+				Context.MODE_PRIVATE);
 		String value = sharedPreferences.getString(keyValue, "");
 		return value;
 	}
@@ -89,8 +90,8 @@ public class StoreSharePreferences {
 	 * @throws:
 	 */
 	public int loadIntegerSavedPreferences(String keyValue) {
-		sharedPreferences = PreferenceManager
-				.getDefaultSharedPreferences(mContext);
+		sharedPreferences = mContext.getSharedPreferences(NAME_PREF,
+				Context.MODE_PRIVATE);
 		int value = sharedPreferences.getInt(keyValue, 0);
 		return value;
 	}
@@ -105,17 +106,15 @@ public class StoreSharePreferences {
 	 * @throws:
 	 */
 	public float loadFloatSavedPreferences(String keyValue) {
-		sharedPreferences = PreferenceManager
-				.getDefaultSharedPreferences(mContext);
+		sharedPreferences = mContext.getSharedPreferences(NAME_PREF,
+				Context.MODE_PRIVATE);
 		float value = sharedPreferences.getFloat(keyValue, 0);
 		return value;
 	}
 
-	public void saveStringPreferencesFloat(String key, float value) {
-		sharedPreferences = mContext.getSharedPreferences("abc",
+	public void saveFloatPreferences(String key, float value) {
+		sharedPreferences = mContext.getSharedPreferences(NAME_PREF,
 				Context.MODE_PRIVATE);
-		// SharedPreferences sharedPreferences = PreferenceManager
-		// .getDefaultSharedPreferences(mContext);
 		Editor editor = sharedPreferences.edit();
 		editor.putFloat(key, value);
 		editor.commit();
@@ -131,8 +130,8 @@ public class StoreSharePreferences {
 	 * @throws:
 	 */
 	public void saveStringPreferences(String key, String value) {
-		SharedPreferences sharedPreferences = PreferenceManager
-				.getDefaultSharedPreferences(mContext);
+		sharedPreferences = mContext.getSharedPreferences(NAME_PREF,
+				Context.MODE_PRIVATE);
 		Editor editor = sharedPreferences.edit();
 		editor.putString(key, value);
 		editor.commit();

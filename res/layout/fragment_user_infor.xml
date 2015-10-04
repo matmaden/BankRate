@@ -10,32 +10,135 @@
 
     <TextView
         android:id="@+id/txtWellcome"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/textWellcome" />
+        android:text="@string/textWellcome" 
+        android:textColor="@color/defaultText"
+        android:textSize="@dimen/font_large"
+        android:gravity="center"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtWellcome"
-        android:orientation="horizontal" >
+        android:layout_marginTop="@dimen/dip10"
+        android:orientation="vertical" >
 
-        <TextView
-            style="@style/NormalTextView"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/ho_ten" />
+            android:orientation="horizontal" >
 
-        <EditText
-            android:id="@+id/edtHoTen"
-            android:layout_width="0dp"
+            <TextView
+                style="@style/NormalTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/ho_ten" />
+
+            <EditText
+                android:id="@+id/edtHoTen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:hint="@string/ho_ten_"
+                android:inputType="text"
+                android:textColor="@color/defaultText"
+                android:textSize="@dimen/font_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/register_phone_number"
-            android:inputType="text"
-            android:textColor="@color/defaultText"
-            android:textSize="@dimen/font_normal" />
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/NormalTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dien_thoai" />
+
+            <EditText
+                android:id="@+id/edtDienThoai"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:hint="@string/dien_thoai_"
+                android:inputType="text"
+                android:textColor="@color/defaultText"
+                android:textSize="@dimen/font_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/NormalTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dia_chi" />
+
+            <EditText
+                android:id="@+id/edtDiaChi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:hint="@string/dia_chi_"
+                android:inputType="text"
+                android:textColor="@color/defaultText"
+                android:textSize="@dimen/font_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/NormalTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/ngay_sinh" />
+
+            <Button
+                android:id="@+id/btnBirthday"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@android:color/transparent"
+                android:hint="@string/ngay_sinh_"
+                android:textColor="@color/defaultText"
+                android:textSize="@dimen/font_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/NormalTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/email" />
+
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:hint="@string/email_"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/defaultText"
+                android:textSize="@dimen/font_normal" />
+        </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>

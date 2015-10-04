@@ -55,9 +55,14 @@
     <string name="hello_world">Hello world!</string>
     <string name="textWellcome">Chào mừng bạn đến với ứng dụng BankRate!</string>
     <string name="ho_ten">Họ và tên:</string>
+    <string name="ho_ten_">Họ và tên</string>
     <string name="dia_chi">Địa chỉ:</string>
+    <string name="dia_chi_">Địa chỉ</string>
     <string name="email">Email:</string>
-    <string name="dien_thoai">Điện thoại:</string>
+    <string name="email_">Email</string>
+   <string name="dien_thoai">Điện thoại:</string>
+    <string name="dien_thoai_">Điện thoại</string>
     <string name="ngay_sinh">Ngày sinh:</string>
+    <string name="ngay_sinh_">Ngày sinh</string>
 
 </resources>

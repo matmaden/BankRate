@@ -8,7 +8,7 @@
     <color name="header_general_orange">#f5821f</color>
     <color name="header_general_text">#595959</color>
     -->
-    <color name="defaultText">#94938a</color>
+    <color name="defaultText">#000000</color>
     <color name="defaultTextLight">#FFFFFF</color>
     <color name="defaultTextDark">#d5d5d5</color>
     <color name="color_stroke">#dcdcdc</color>

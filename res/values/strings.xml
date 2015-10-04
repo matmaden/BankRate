@@ -12,7 +12,6 @@
     <string name="login_facebook">Login with Facebook</string>
     <!-- <string name="FACEBOOK_ID">453345281375610</string> -->
     <string name="or">Or</string>
-    <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="not_a_youlook_user">Have not account user?</string>
@@ -51,9 +50,14 @@
     <string name="drawer_close">Close Drawer</string>
     <string name="message_quit_app">Press back again to exit!</string>
     <string name="list_catagory">Danh mục sách</string>
-    <string name="hobit"> Cà phê,đọc báo mỗi buổi sáng. Thích đi câu cá, đi du lịch bụi, tham gia các cuộc chơi mang tính chất may mắn, hên xui. :3 <br />Music: (tùy tâm trạng) các thể loại nhạc quê hương, nhạc trẻ, nhạc trữ tình, rap, rock... <br /> Thể thao: bóng đá, billard, cầu lông, câu cá, cờ tướng… <br /></string>
     <string name="search">Search</string>
     <string name="title_activity_user_infor">UserInforActivity</string>
     <string name="hello_world">Hello world!</string>
+    <string name="textWellcome">Chào mừng bạn đến với ứng dụng BankRate!</string>
+    <string name="ho_ten">Họ và tên:</string>
+    <string name="dia_chi">Địa chỉ:</string>
+    <string name="email">Email:</string>
+    <string name="dien_thoai">Điện thoại:</string>
+    <string name="ngay_sinh">Ngày sinh:</string>
 
 </resources>

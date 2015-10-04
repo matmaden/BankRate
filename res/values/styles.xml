@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-<!--     <style name="YouLookTheme" parent="Theme.Sherlock"></style> -->
+    <!-- <style name="YouLookTheme" parent="Theme.Sherlock"></style> -->
 
     <style name="DialogCustomTheme" parent="@android:style/Theme.Dialog">
         <item name="android:windowBackground">@android:color/transparent</item>
@@ -12,18 +12,19 @@
         <item name="android:drawSelectorOnTop">true</item>
         <item name="android:listSelector">@drawable/photogrid_list_selector</item>
     </style>
-	<style name="ListView"> 
-        <item name="android:listSelector">@drawable/list_selector</item> 
+
+    <style name="ListView">
+        <item name="android:listSelector">@drawable/list_selector</item>
     </style>
     <!--
         Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
+            backward-compatibility can go here.
         -->
     </style>
 
@@ -31,4 +32,46 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+    <!-- truonglt2 -->
+    <style name="EduPlatform.ButtonAppearance.BaseButton" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/base_button_bg_selector</item>
+        <item name="android:textSize">@dimen/font_large</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="EduPlatform.ButtonBack" parent="@android:style/Widget.Button">
+        <item name="android:textColor">@color/Color_default</item>
+        <item name="android:textSize">@dimen/dip14</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/drawable_back_selector</item>
+    </style>
+
+    <style name="NormalTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/defaultText</item>
+        <item name="android:textSize">@dimen/font_normal</item>
+    </style>
+
+    <style name="NormalTextView.Large">
+        <item name="android:textSize">@dimen/font_large</item>
+    </style>
+
+    <style name="NormalTextView.Small">
+        <item name="android:textSize">@dimen/font_small</item>
+    </style>
+
+    <style name="NormalTextView.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="NormalImageView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:contentDescription">@null</item>
+        <item name="android:padding">@dimen/dip05</item>
+    </style>
+
 </resources>

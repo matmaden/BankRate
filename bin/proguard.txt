@@ -76,6 +76,9 @@
 # view AndroidManifest.xml #generated:70
 -keep class com.bankrate.services.WifiConnectionReceiver { <init>(...); }
 
+# view res/layout/left_navigation.xml #generated:13
+-keep class com.bankrate.views.RoundedImageView { <init>(...); }
+
 # view res/layout/menu.xml #generated:2
 -keep class webdev.slidingmenu.SampleListFragment { <init>(...); }
 

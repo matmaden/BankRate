@@ -8,7 +8,6 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 
 import com.bankrate.R;
-import com.bankrate.utils.StoreSharePreferences;
 
 /**
  * @Description: activity man hinh splash screen
@@ -16,7 +15,6 @@ import com.bankrate.utils.StoreSharePreferences;
  * @since:Feb 7, 2014 4:24:04 PM
  * @version: 1.0
  * @since: 1.0
- * adsasdasasdasddasdasdasdasd132
  */
 public class WellcomeActivity extends Activity implements OnClickListener {
 	private static int SPLASH_TIME = 1000;

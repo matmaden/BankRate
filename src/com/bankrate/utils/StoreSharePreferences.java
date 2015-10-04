@@ -36,7 +36,7 @@ public class StoreSharePreferences {
 	 * 
 	 * @author: truonglt2
 	 * @param keyValue
-	 * @return
+	 * @return Mamadentx7
 	 * @return: boolean
 	 * @throws:
 	 */

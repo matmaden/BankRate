@@ -94,7 +94,7 @@ public class UserController extends AbstractController {
 	public void handleViewEvent(ActionEvent e) {
 		switch (e.action) {
 			//	get data list catagory
-			case ActionEventConstant.GET_DATA_LIST_CATAGORY: 
+			case ActionEventConstant.GET_DATA_LIST_MENU: 
 				UserModel.getInstance().requestData(e);
 			// get data list book
 			case ActionEventConstant.GET_DATA_LIST_BOOK_OF_CATAGORY:

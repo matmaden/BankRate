@@ -2256,6 +2256,8 @@ containing a value of this type.
         public static final int sign_in=0x7f0a0018;
         public static final int sign_up=0x7f0a0017;
         public static final int textWellcome=0x7f0a002e;
+        public static final int thong_tin_lai_suat=0x7f0a0039;
+        public static final int thong_tin_tien_vay=0x7f0a003a;
         public static final int timeOutAnimation=0x7f0a000f;
         public static final int title_activity_user_infor=0x7f0a002c;
         public static final int your_name=0x7f0a0019;

@@ -14,6 +14,9 @@ import com.bankrate.imgloader.ImageLoader;
   * 
   */
 public class Common {
+	public static final int SCREEN_INFOR_RATE=1;
+	public static final int SCREEN_INFOR_LOAN=2;
+	
 	public static String AUTHORIZE_STRING="";
 	// OWNER USER INFOMATION
 	public static User USER_INFOMATION;

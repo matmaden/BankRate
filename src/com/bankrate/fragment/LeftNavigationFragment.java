@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -15,35 +14,37 @@ import android.widget.ListView;
 
 import com.bankrate.R;
 import com.bankrate.activity.MainActivity;
-import com.bankrate.adapters.CatagoryListAdapter;
+import com.bankrate.adapters.MenuListAdapter;
 import com.bankrate.common.ActionEvent;
 import com.bankrate.common.ActionEventConstant;
+import com.bankrate.common.Common;
 import com.bankrate.common.ModelEvent;
 import com.bankrate.controller.UserController;
-import com.bankrate.dto.Catagory;
+import com.bankrate.dto.MenuContent;
 
-/** 
-  * @Description: lop menu ben trai
-  * @author:truonglt2
-  * @since:Feb 7, 2014 4:27:56 PM
-  * @version: 1.0
-  * @since: 1.0
-  * 
-  */
+/**
+ * @Description: lop menu ben trai
+ * @author:truonglt2
+ * @since:Feb 7, 2014 4:27:56 PM
+ * @version: 1.0
+ * @since: 1.0
+ * 
+ */
 public class LeftNavigationFragment extends BaseFragment implements
 		OnClickListener {
 
 	// private static String KEY_ID_USER = "";
-	CatagoryListAdapter adapterCatagory;
-	ListView lvDeals;
+	MenuListAdapter adapterMenu;
+	ListView lvMenus;
 
 	/**
-	*   Khoi tao cac thanh phan
-	*  @author: truonglt2
-	*  @return
-	*  @return: LeftNavigationFragment
-	*  @throws: 
-	*/
+	 * Khoi tao cac thanh phan
+	 * 
+	 * @author: truonglt2
+	 * @return
+	 * @return: LeftNavigationFragment
+	 * @throws:
+	 */
 	public LeftNavigationFragment newInstance() {
 		LeftNavigationFragment f = new LeftNavigationFragment();
 		// Supply index input as an argument.
@@ -53,15 +54,16 @@ public class LeftNavigationFragment extends BaseFragment implements
 	}
 
 	/**
-	*  khoi tao view
-	*  @author: truonglt2
-	*  @param inflater
-	*  @param container
-	*  @param savedInstanceState
-	*  @return
-	*  @return: LeftNavigationFragment
-	*  @throws: 
-	*/
+	 * khoi tao view
+	 * 
+	 * @author: truonglt2
+	 * @param inflater
+	 * @param container
+	 * @param savedInstanceState
+	 * @return
+	 * @return: LeftNavigationFragment
+	 * @throws:
+	 */
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -70,15 +72,14 @@ public class LeftNavigationFragment extends BaseFragment implements
 		return layout;
 	}
 
-
-
 	/**
-	*  xu ly cac su kien click
-	*  @author: truonglt2
-	*  @param v
-	*  @return: LeftNavigationFragment
-	*  @throws: 
-	*/
+	 * xu ly cac su kien click
+	 * 
+	 * @author: truonglt2
+	 * @param v
+	 * @return: LeftNavigationFragment
+	 * @throws:
+	 */
 	@Override
 	public void onClick(View v) {
 	}
@@ -93,21 +94,43 @@ public class LeftNavigationFragment extends BaseFragment implements
 	 */
 	@Override
 	protected void init(View layout) {
-		lvDeals = (ListView) layout.findViewById(R.id.listMenuLeft);
+		lvMenus = (ListView) layout.findViewById(R.id.listMenuLeft);
 
-		adapterCatagory = new CatagoryListAdapter(getActivity());
-		lvDeals.setAdapter(adapterCatagory);
-		lvDeals.setOnItemClickListener(new OnItemClickListener() {
+		// Creating an Adapter to add items to the listview mDrawerList
+		adapterMenu = new MenuListAdapter(getActivity());
+
+		// Setting the adapter on mDrawerList
+		lvMenus.setAdapter(adapterMenu);
+		lvMenus.setOnItemClickListener(new OnItemClickListener() {
 			@Override
-			public void onItemClick(AdapterView<?> arg0, View v, int position, long id) {
-				Catagory item = (Catagory) adapterCatagory.getItem(position);// filldeal(adapterPro.get(position).getPromotionId());
-				Fragment fragmentNew = ListBookOfCatagoryFragment.newInstance(item.getIdCatagory(), item.getTitle());
-				((MainActivity) getActivity()).setFragmentContent(fragmentNew,ListBookOfCatagoryFragment.TAG);
-				System.out.println(item.getIdCatagory());
+			public void onItemClick(AdapterView<?> arg0, View v, int position,
+					long id) {
+				MenuContent item = (MenuContent) adapterMenu.getItem(position);// filldeal(adapterPro.get(position).getPromotionId());
+				goScreenWithItemSelected(item);
 			}
 		});
 		// new ProgressTaskListMoreDeal().execute();
 		getDataShowList();
+	}
+
+	void goScreenWithItemSelected(MenuContent item) {
+		switch (item.getIdMenu()) {
+		case Common.SCREEN_INFOR_RATE: {
+			Fragment fragmentNew = StoreDetailsFragment.newInstance();
+			((MainActivity) getActivity()).setFragmentContent(fragmentNew,
+					StoreDetailsFragment.TAG);
+			break;
+		}
+		case Common.SCREEN_INFOR_LOAN: {
+			Fragment fragmentNew = ListBookOfCatagoryFragment.newInstance("","");
+			((MainActivity) getActivity()).setFragmentContent(fragmentNew,
+					ListBookOfCatagoryFragment.TAG);
+			break;
+		}
+
+		default:
+			break;
+		}
 	}
 
 	/**
@@ -119,7 +142,6 @@ public class LeftNavigationFragment extends BaseFragment implements
 	 */
 	@Override
 	protected void setValueForMembers() {
-		// TODO Auto-generated method stub
 
 	}
 
@@ -132,7 +154,6 @@ public class LeftNavigationFragment extends BaseFragment implements
 	 */
 	@Override
 	protected void setEventForMembers() {
-		// TODO Auto-generated method stub
 
 	}
 
@@ -146,7 +167,7 @@ public class LeftNavigationFragment extends BaseFragment implements
 	 */
 	protected void getDataShowList() {
 		ActionEvent e = new ActionEvent();
-		e.action = ActionEventConstant.GET_DATA_LIST_CATAGORY;
+		e.action = ActionEventConstant.GET_DATA_LIST_MENU;
 		e.sender = this;
 		e.viewData = new Bundle();
 		UserController.getInstance().handleViewEvent(e);
@@ -163,32 +184,33 @@ public class LeftNavigationFragment extends BaseFragment implements
 	@SuppressWarnings("unchecked")
 	@Override
 	public void handleModelViewEvent(ModelEvent modelEvent) {
-		Log.e(TAG,"qua day lan");
-		// TODO Auto-generated method stub
 		ActionEvent act = modelEvent.getActionEvent();
 		switch (act.action) {
-			case ActionEventConstant.GET_DATA_LIST_CATAGORY: {
-					adapterCatagory.clearAll();
-					ArrayList<Catagory> arrMoreDeal = (ArrayList<Catagory>) modelEvent.getModelData();
-					for (int i = 0; i < arrMoreDeal.size(); i++) {
-						adapterCatagory.addItem(arrMoreDeal.get(i));
-					}
-				}
-				adapterCatagory.notifyDataSetChanged();
-				break;
-			default:
-				break;
+		case ActionEventConstant.GET_DATA_LIST_MENU: {
+			adapterMenu.clearAll();
+			ArrayList<MenuContent> arrMenu = (ArrayList<MenuContent>) modelEvent
+					.getModelData();
+			for (int i = 0; i < arrMenu.size(); i++) {
+				adapterMenu.addItem(arrMenu.get(i));
+			}
+			adapterMenu.notifyDataSetChanged();
+			lvMenus.setAdapter(adapterMenu);
+		}
+			break;
+		default:
+			break;
 		}
 	}
+
 	/**
-	*  huy fragment
-	*  @author: truonglt2
-	*  @return: LeftNavigationFragment
-	*  @throws: 
-	*/
+	 * huy fragment
+	 * 
+	 * @author: truonglt2
+	 * @return: LeftNavigationFragment
+	 * @throws:
+	 */
 	@Override
 	public void onDestroy() {
-		// TODO Auto-generated method stub
 		super.onDestroy();
 	}
 }

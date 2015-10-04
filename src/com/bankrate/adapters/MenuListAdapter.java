@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bankrate.R;
@@ -49,21 +48,17 @@ public class MenuListAdapter extends BaseAdapter {
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		MoredealsViewHolder viewHolder;
+		MenuViewHolder viewHolder;
 		if (convertView == null) {
 			convertView = inflater.inflate(R.layout.item_menu_content, null);
-			viewHolder = new MoredealsViewHolder();
-			viewHolder.imageCatagory = (ImageView) convertView
-					.findViewById(R.id.img_catagory);
+			viewHolder = new MenuViewHolder();
 			viewHolder.nameCatagory = (TextView) convertView
 					.findViewById(R.id.tvtTitleMenu);
 			convertView.setTag(viewHolder);
 		} else {
-			viewHolder = (MoredealsViewHolder) convertView.getTag();
+			viewHolder = (MenuViewHolder) convertView.getTag();
 		}
 		viewHolder.nameCatagory.setText(arr.get(position).getTitle());
-		viewHolder.imageCatagory
-				.setImageResource(R.drawable.icon_config_language);
 		return convertView;
 	}
 
@@ -103,8 +98,7 @@ public class MenuListAdapter extends BaseAdapter {
 	 * @since:Feb 7, 2014 3:12:00 PM
 	 * @Description: lop temp
 	 */
-	class MoredealsViewHolder {
+	class MenuViewHolder {
 		public TextView nameCatagory;
-		public ImageView imageCatagory;
 	}
 }

@@ -7,8 +7,10 @@ import android.app.Fragment;
 import android.database.Cursor;
 import android.os.Bundle;
 
+import com.bankrate.R;
 import com.bankrate.common.ActionEvent;
 import com.bankrate.common.ActionEventConstant;
+import com.bankrate.common.Common;
 import com.bankrate.common.ErrorConstants;
 import com.bankrate.common.ModelEvent;
 import com.bankrate.controller.UserController;
@@ -59,16 +61,19 @@ public class UserModel {
 		}
 		switch (e.action) {
 		// handle event get data list category
-		case ActionEventConstant.GET_DATA_LIST_CATAGORY: {
+		case ActionEventConstant.GET_DATA_LIST_MENU: {
 			try {
-
-				String query = ConstantsDatabase.queryAllTable
-						+ ConstantsDatabase.CATAGORY_TABLE;
-				Cursor result = DatabaseHelp.getInstance(base).selectQuery(
-						query);
-				ArrayList<Catagory> arrCatagory = getArrCatagory(result);
-				DatabaseHelp.getInstance(base).close();
-				model.setModelData(arrCatagory);
+				ArrayList<MenuContent> arrMenu = new ArrayList<MenuContent>();
+				MenuContent menu1 = new MenuContent();
+				menu1.setIdMenu(Common.SCREEN_INFOR_RATE);
+				menu1.setTitle("Thông tin lãi xuất");
+				arrMenu.add(menu1);
+				MenuContent menu2 = new MenuContent();
+				menu2.setIdMenu(Common.SCREEN_INFOR_LOAN);
+				menu2.setTitle("Thông tin tiền vay");
+				arrMenu.add(menu2);
+				
+				model.setModelData(arrMenu);
 				model.setModelCode(ErrorConstants.ERROR_CODE_SUCCESS);
 				UserController.getInstance().handleModelEvent(model);
 			} catch (Exception ex) {
@@ -263,12 +268,7 @@ public class UserModel {
 				String content = cursor.getString(4);
 				String idBook = cursor.getString(5);
 
-				item.setIdMenu(idMenu);
 				item.setTitle(title);
-				item.setIndex(index);
-				item.setLevel(level);
-				item.setContent(content);
-				item.setIdBook(idBook);
 
 				arrayList.add(item);
 				cursor.moveToNext();

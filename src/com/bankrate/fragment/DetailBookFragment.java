@@ -65,11 +65,8 @@ public class DetailBookFragment extends Fragment {
 	@SuppressLint("SetJavaScriptEnabled")
 	protected void init(View layout) {
 		mContent = (MenuContent) getArguments().getSerializable("Content");
-		System.out.println("chuoi content:"+mContent.getContent());
-		String showContent = mContent.getContent();
 		WebView webView = (WebView)layout.findViewById(R.id.webView); 
 		webView.getSettings().setJavaScriptEnabled(true);
-		webView.loadDataWithBaseURL(null, showContent, "text/html", "UTF-8", null);
 	}
 
 }

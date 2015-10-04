@@ -17,7 +17,7 @@ public class ActionEventConstant {
 	public static final int ACTION_DOWN_LOAD = 6;
 	public static final int ACTION_CANCEL_DOWNLOAD = 7;
 	public static final int ACTION_LATER_DOWNLOAD = 8;
-	public static final int GET_DATA_LIST_CATAGORY = 9;
+	public static final int GET_DATA_LIST_MENU = 9;
 	public static final int GET_DATA_LIST_BOOK_OF_CATAGORY = 10;
 	public static final int ACTION_CHANGE_VIEW_DETAIL_BOOK_ACTIVTY = 11;
 	public static final int GET_DATA_LIST_MENU_OF_BOOK = 12;

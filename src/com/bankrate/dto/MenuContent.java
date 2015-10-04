@@ -13,17 +13,13 @@ import java.io.Serializable;
 @SuppressWarnings("serial")
 public class MenuContent implements Serializable {
 
-	private String idMenu;
+	private int idMenu;
 	private String title;
-	private String index;
-	private String level;
-	private String content;
-	private String idBook;
 
 	/**
 	 * @return the idMenu
 	 */
-	public String getIdMenu() {
+	public int getIdMenu() {
 		return idMenu;
 	}
 
@@ -31,7 +27,7 @@ public class MenuContent implements Serializable {
 	 * @param idMenu
 	 *            the idMenu to set
 	 */
-	public void setIdMenu(String idMenu) {
+	public void setIdMenu(int idMenu) {
 		this.idMenu = idMenu;
 	}
 
@@ -50,63 +46,4 @@ public class MenuContent implements Serializable {
 		this.title = title;
 	}
 
-	/**
-	 * @return the index
-	 */
-	public String getIndex() {
-		return index;
-	}
-
-	/**
-	 * @param index
-	 *            the index to set
-	 */
-	public void setIndex(String index) {
-		this.index = index;
-	}
-
-	/**
-	 * @return the level
-	 */
-	public String getLevel() {
-		return level;
-	}
-
-	/**
-	 * @param level
-	 *            the level to set
-	 */
-	public void setLevel(String level) {
-		this.level = level;
-	}
-
-	/**
-	 * @return the content
-	 */
-	public String getContent() {
-		return content;
-	}
-
-	/**
-	 * @param content
-	 *            the content to set
-	 */
-	public void setContent(String content) {
-		this.content = content;
-	}
-
-	/**
-	 * @return the idBook
-	 */
-	public String getIdBook() {
-		return idBook;
-	}
-
-	/**
-	 * @param idBook
-	 *            the idBook to set
-	 */
-	public void setIdBook(String idBook) {
-		this.idBook = idBook;
-	}
 }

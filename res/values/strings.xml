@@ -64,5 +64,6 @@
     <string name="dien_thoai_">Điện thoại</string>
     <string name="ngay_sinh">Ngày sinh:</string>
     <string name="ngay_sinh_">Ngày sinh</string>
-
+	<string name="thong_tin_lai_suat">Thông tin lãi suất</string>
+	<string name="thong_tin_tien_vay">Thông tin tiền vay</string>
 </resources>

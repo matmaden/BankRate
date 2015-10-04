@@ -4,16 +4,18 @@
     android:installLocation="preferExternal"
     android:versionCode="1"
     android:versionName="1.0" >
-	<uses-sdk android:minSdkVersion="11" android:targetSdkVersion="15"/> 
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="15" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-	<uses-permission android:name="com.viettel.services.MyService" />
+    <uses-permission android:name="com.viettel.services.MyService" />
 
     <permission
         android:name="com.viettel.services.MyService"
@@ -21,14 +23,17 @@
         android:label="lbletext"
         android:protectionLevel="dangerous" >
     </permission>
-    
-     <uses-permission android:name="com.viettel.permission.BROADCAST" />
-     <permission
+
+    <uses-permission android:name="com.viettel.permission.BROADCAST" />
+
+    <permission
         android:name="com.viettel.permission.BROADCAST"
         android:label="@string/app_name"
         android:permissionGroup="android.permission-group.MESSAGES"
         android:protectionLevel="dangerous" />
-     <uses-permission android:name="android.permission.BATTERY_STATS"/>
+
+    <uses-permission android:name="android.permission.BATTERY_STATS" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -38,8 +43,8 @@
             android:name="com.bankrate.activity.WellcomeActivity"
             android:label="@string/app_name"
             android:noHistory="true"
-            android:theme="@style/AppTheme" 
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -49,18 +54,19 @@
         <activity
             android:name="com.bankrate.activity.DetailsTransactionActivity"
             android:screenOrientation="portrait" >
-            
         </activity>
         <activity
             android:name="com.bankrate.activity.MainActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
+
         <service
             android:name="com.bankrate.services.MyService"
             android:enabled="true"
             android:exported="true"
             android:permission="com.viettel.services.MyService" >
         </service>
+
         <receiver
             android:name="com.bankrate.services.WifiConnectionReceiver"
             android:permission="com.viettel.permission.BROADCAST" >
@@ -74,6 +80,11 @@
             android:name="com.bankrate.services.MessageReceiver"
             android:permission="com.viettel.permission.BROADCAST" >
         </receiver>
+
+        <activity
+            android:name="com.bankrate.activity.UserInforActivity"
+            android:label="@string/title_activity_user_infor" >
+        </activity>
     </application>
 
 </manifest>

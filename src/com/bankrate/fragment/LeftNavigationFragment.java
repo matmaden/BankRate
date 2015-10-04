@@ -3,6 +3,7 @@ package com.bankrate.fragment;
 import java.util.ArrayList;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -100,7 +101,7 @@ public class LeftNavigationFragment extends BaseFragment implements
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View v, int position, long id) {
 				Catagory item = (Catagory) adapterCatagory.getItem(position);// filldeal(adapterPro.get(position).getPromotionId());
-				ListBookOfCatagoryFragment fragmentNew = ListBookOfCatagoryFragment.newInstance(item.getIdCatagory(), item.getTitle());
+				Fragment fragmentNew = ListBookOfCatagoryFragment.newInstance(item.getIdCatagory(), item.getTitle());
 				((MainActivity) getActivity()).setFragmentContent(fragmentNew,ListBookOfCatagoryFragment.TAG);
 				System.out.println(item.getIdCatagory());
 			}

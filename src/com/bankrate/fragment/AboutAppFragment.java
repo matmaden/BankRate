@@ -7,8 +7,6 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
-import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
 
 import com.bankrate.R;
 import com.bankrate.common.ModelEvent;
@@ -24,16 +22,11 @@ import com.bankrate.common.ModelEvent;
 public class AboutAppFragment extends BaseFragment implements OnClickListener,
 		AnimationListener {
 	public static final String TAG = AboutAppFragment.class.getSimpleName(); // This
-																			// is
-																			// tag
-																			// to
-																			// show
-																			// log
-	ImageView imgAvatar; // hinh avatar
-	// Animation
-	Animation animSideUp;
-	// Animation
-	Animation animSideTogether;
+																				// is
+																				// tag
+																				// to
+																				// show
+																				// log
 
 	public static AboutAppFragment newInstance() {
 		AboutAppFragment f = new AboutAppFragment();
@@ -73,7 +66,6 @@ public class AboutAppFragment extends BaseFragment implements OnClickListener,
 	 */
 	@Override
 	protected void init(View layout) {
-		imgAvatar = (ImageView) layout.findViewById(R.id.imgAvatar);
 	}
 
 	/**
@@ -86,14 +78,6 @@ public class AboutAppFragment extends BaseFragment implements OnClickListener,
 	@Override
 	protected void setValueForMembers() {
 		// TODO Auto-generated method stub
-		// load the animation
-		animSideUp = AnimationUtils.loadAnimation(getActivity(),
-				R.anim.slide_down);
-		// load the animation
-		animSideTogether = AnimationUtils.loadAnimation(getActivity(),
-				R.anim.together);
-		animSideTogether.setAnimationListener(this);
-		imgAvatar.startAnimation(animSideUp);
 	}
 
 	/**
@@ -131,10 +115,6 @@ public class AboutAppFragment extends BaseFragment implements OnClickListener,
 	 */
 	@Override
 	public void onAnimationEnd(Animation animation) {
-		// TODO Auto-generated method stub
-		if (animation == animSideTogether) {
-			imgAvatar.startAnimation(animSideUp);
-		}
 	}
 
 	/**

@@ -133,7 +133,7 @@ public class MainActivity extends BaseActivity implements OnClickListener
             break;
         case R.id.img_menu_store:
         	try {
-				StoreDetailsFragment fragmentStotr = StoreDetailsFragment.newInstance();
+				Fragment fragmentStotr = StoreDetailsFragment.newInstance();
         		FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.frame_main, fragmentStotr, StoreDetailsFragment.TAG);
                 fragmentTransaction.commit();

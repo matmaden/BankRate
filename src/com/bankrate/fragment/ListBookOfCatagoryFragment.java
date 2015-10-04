@@ -3,6 +3,7 @@ package com.bankrate.fragment;
 import java.util.ArrayList;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -36,7 +37,7 @@ public class ListBookOfCatagoryFragment extends BaseFragment implements
 	ListView lvBook;
 	TextView textCatagoryListBook;
 	ImageView imgCatagoryListBook;
-	public static ListBookOfCatagoryFragment newInstance(String idCatagory,String nameCatagory) {
+	public static Fragment newInstance(String idCatagory,String nameCatagory) {
 		ListBookOfCatagoryFragment f = new ListBookOfCatagoryFragment();
 		// Supply index input as an argument.
 		Bundle args = new Bundle();

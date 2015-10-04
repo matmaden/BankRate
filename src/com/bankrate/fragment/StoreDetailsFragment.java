@@ -1,6 +1,7 @@
 package com.bankrate.fragment;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -29,7 +30,7 @@ public class StoreDetailsFragment extends BaseFragment implements
 	*  @return: StoreDetailsFragment
 	*  @throws: 
 	*/
-	public static StoreDetailsFragment newInstance() {
+	public static Fragment newInstance() {
 		StoreDetailsFragment f = new StoreDetailsFragment();
 		// Supply index input as an argument.
 		Bundle args = new Bundle();

@@ -53,5 +53,7 @@
     <string name="list_catagory">Danh mục sách</string>
     <string name="hobit"> Cà phê,đọc báo mỗi buổi sáng. Thích đi câu cá, đi du lịch bụi, tham gia các cuộc chơi mang tính chất may mắn, hên xui. :3 <br />Music: (tùy tâm trạng) các thể loại nhạc quê hương, nhạc trẻ, nhạc trữ tình, rap, rock... <br /> Thể thao: bóng đá, billard, cầu lông, câu cá, cờ tướng… <br /></string>
     <string name="search">Search</string>
+    <string name="title_activity_user_infor">UserInforActivity</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>

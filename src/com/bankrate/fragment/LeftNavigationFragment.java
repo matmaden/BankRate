@@ -94,11 +94,7 @@ public class LeftNavigationFragment extends BaseFragment implements
 	 */
 	@Override
 	protected void init(View layout) {
-<<<<<<< HEAD
 		lvMenus = (ListView) layout.findViewById(R.id.listMenuLeft);
-=======
-		lvDeals = (ListView) layout.findViewById(R.id.listMenuLeft);
->>>>>>> refs/remotes/origin/master
 
 		// Creating an Adapter to add items to the listview mDrawerList
 		adapterMenu = new MenuListAdapter(getActivity());

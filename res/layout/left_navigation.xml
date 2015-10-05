@@ -7,22 +7,13 @@
     <RelativeLayout
         android:id="@+id/drawer_rl_profile"
         android:layout_width="match_parent"
-<<<<<<< HEAD
         android:layout_height="@dimen/dip100"
-=======
-        android:layout_height="wrap_content"
->>>>>>> refs/remotes/origin/master
         android:gravity="center_vertical" >
 
         <com.bankrate.views.RoundedImageView
             android:id="@+id/drawer_profile_img"
-<<<<<<< HEAD
             android:layout_width="@dimen/dip80"
             android:layout_height="@dimen/dip80"
-=======
-            android:layout_width="@dimen/dip100"
-            android:layout_height="@dimen/dip100"
->>>>>>> refs/remotes/origin/master
             android:layout_margin="@dimen/dip10"
             android:adjustViewBounds="true"
             android:contentDescription="@string/app_name"
@@ -61,10 +52,6 @@
             android:layout_alignParentBottom="true"
             android:background="@color/Color_Divider" />
     </RelativeLayout>
-<<<<<<< HEAD
-    <!--  -->
-=======
->>>>>>> refs/remotes/origin/master
 
     <ListView
         android:id="@+id/listMenuLeft"
